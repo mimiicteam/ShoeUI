@@ -8,8 +8,48 @@
 import SwiftUI
 
 struct BaseView: View {
+    @StateObject var appData = AppViewModel()
+    
+    // Hiding Tab bar..
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection: $appData.currentTab) {
+            Text("Home")
+                .environmentObject(appData)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.black.opacity(0.04))
+                .tag(Tab.Home)
+            
+            Text("Heart")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.black.opacity(0.04))
+                .tag(Tab.Heart)
+            
+            Text("Cart")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.black.opacity(0.04))
+                .tag(Tab.Cart)
+            
+            Text("Message")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.black.opacity(0.04))
+                .tag(Tab.Message)
+            
+            Text("Person")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.black.opacity(0.04))
+                .tag(Tab.Person)
+        }
+        .overlay(
+            // Custom Tabar ...
+            HStack(spacing: 0) {
+                TabButton(currentTab: $appData.currentTab)
+            }
+                .background(Color.white)
+            , alignment: .bottom
+        )
     }
 }
 
