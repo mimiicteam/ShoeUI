@@ -9,12 +9,12 @@ import SwiftUI
 
 struct Message: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Message")
     }
 }
 
 struct Message_Previews: PreviewProvider {
     static var previews: some View {
-        Message()
+        ContentView()
     }
 }

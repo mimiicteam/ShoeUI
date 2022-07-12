@@ -16,28 +16,32 @@ struct BaseView: View {
     }
     var body: some View {
         TabView(selection: $appData.currentTab) {
-            Text("Home")
+            Home()
                 .environmentObject(appData)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.black.opacity(0.04))
                 .tag(Tab.Home)
             
-            Text("Heart")
+            Heart()
+                .environmentObject(appData)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.black.opacity(0.04))
                 .tag(Tab.Heart)
             
-            Text("Cart")
+            Cart()
+                .environmentObject(appData)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.black.opacity(0.04))
                 .tag(Tab.Cart)
             
-            Text("Message")
+            Message()
+                .environmentObject(appData)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.black.opacity(0.04))
                 .tag(Tab.Message)
             
-            Text("Person")
+            Account()
+                .environmentObject(appData)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.black.opacity(0.04))
                 .tag(Tab.Person)
