@@ -52,6 +52,7 @@ struct BaseView: View {
                 TabButton(currentTab: $appData.currentTab)
             }
                 .background(Color.white)
+                .offset(y: appData.showingDetail ? 200 : 0)
             , alignment: .bottom
         )
     }

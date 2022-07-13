@@ -11,6 +11,10 @@ class AppViewModel: ObservableObject {
     //MARK: - Tab Bar..
     @Published var currentTab: Tab = .Home
     @Published var homeTab: String  = "Sneakers"
+    
+    //MARK: - Detail View Properties
+    @Published var currentProduct: Product?
+    @Published var showingDetail: Bool = false
 }
 
 //MARK: - Enum Case for Tab Items

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Home: View {
+    @EnvironmentObject var appData: AppViewModel
+    @Namespace var animation
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 15) {
@@ -78,11 +80,19 @@ struct Home: View {
                 LazyVGrid(columns: columns, spacing: 12) {
                     ForEach(products) { product in
                         CardView(product: product)
+                            .onTapGesture {
+                                withAnimation {
+                                    appData.currentProduct = product
+                                    appData.showingDetail = true
+                                }
+                            }
                     }
                 }
-                .padding()
             }
         }
+        .overlay(
+            DetailView(animation: animation).environmentObject(appData)
+        )
     }
 }
 

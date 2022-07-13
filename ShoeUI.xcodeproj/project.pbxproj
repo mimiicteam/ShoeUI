@@ -25,6 +25,8 @@
 		7C4D841D287CA495005F0860 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D841C287CA495005F0860 /* AppViewModel.swift */; };
 		7C4D841F287CA63F005F0860 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D841E287CA63F005F0860 /* BaseView.swift */; };
 		7C4D8423287CA831005F0860 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D8422287CA831005F0860 /* TabButton.swift */; };
+		7C798723287F1C0C00C37091 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C798722287F1C0C00C37091 /* DetailView.swift */; };
+		7C79872B287F2E5800C37091 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C79872A287F2E5800C37091 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		7C4D841C287CA495005F0860 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		7C4D841E287CA63F005F0860 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		7C4D8422287CA831005F0860 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		7C798722287F1C0C00C37091 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		7C79872A287F2E5800C37091 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 		7C4D83EE287C82D6005F0860 /* ShoeUI */ = {
 			isa = PBXGroup;
 			children = (
+				7C798724287F2D4000C37091 /* Extension */,
 				7C4D841B287CA389005F0860 /* ViewModel */,
 				7C4D841A287CA386005F0860 /* Model */,
 				7C4D8419287CA37F005F0860 /* View */,
@@ -162,6 +167,7 @@
 				7C446359287DB9C300280608 /* Message.swift */,
 				7C44635B287DB9CA00280608 /* Account.swift */,
 				7C4D841E287CA63F005F0860 /* BaseView.swift */,
+				7C798722287F1C0C00C37091 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +196,14 @@
 				7C446363287DD2C100280608 /* CardView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7C798724287F2D4000C37091 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7C79872A287F2E5800C37091 /* Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,9 +336,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C79872B287F2E5800C37091 /* Extension.swift in Sources */,
 				7C4D83F2287C82D6005F0860 /* ContentView.swift in Sources */,
 				7C4D83F0287C82D6005F0860 /* ShoeUIApp.swift in Sources */,
 				7C4D841D287CA495005F0860 /* AppViewModel.swift in Sources */,
+				7C798723287F1C0C00C37091 /* DetailView.swift in Sources */,
 				7C446360287DC5ED00280608 /* SegmentButton.swift in Sources */,
 				7C4D8423287CA831005F0860 /* TabButton.swift in Sources */,
 				7C446362287DCCEC00280608 /* Product.swift in Sources */,
