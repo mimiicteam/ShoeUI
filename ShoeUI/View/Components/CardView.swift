@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     @State var product: Product
+    @Namespace var animation
     var body: some View {
         VStack(spacing: 15) {
             //MARK: - HEART
@@ -29,6 +30,7 @@ struct CardView: View {
             Image(product.productImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .matchedGeometryEffect(id: product.productImage, in: animation)
                 .padding()
                 .rotationEffect(.init(degrees: -20))
                 .background(
@@ -56,6 +58,17 @@ struct CardView: View {
                 .font(.title2.bold())
             
             //MARK: - PRODUCT RAITING
+            HStack(spacing: 4) {
+                ForEach(1...5, id:\.self) { index in
+                    Image(systemName: "star.fill")
+                        .font(.system(size: 9.5))
+                        .foregroundColor(product.productRaiting >= index ? .yellow : .gray)
+                }
+                
+                Text(" (\(product.productRaiting).0)")
+                    .font(.caption.bold())
+                    .foregroundColor(.gray)
+            }
             
         }
         .padding()
@@ -63,8 +76,8 @@ struct CardView: View {
     }
 }
 
-//struct CardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardView()
-//    }
-//}
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
