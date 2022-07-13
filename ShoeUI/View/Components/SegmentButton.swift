@@ -47,8 +47,8 @@ struct SegmentButton: View {
     }
 }
 
-//struct SegmentButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SegmentButton()
-//    }
-//}
+struct SegmentButton_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
